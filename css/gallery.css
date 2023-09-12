@@ -1,0 +1,98 @@
+.gallery{
+    grid-column: 1 / -1;
+}
+
+.gallery-section{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,300px);
+    grid-gap:1rem;
+    padding:5px 60px;
+    grid-template-areas: 
+    "gallery_1 gallery_1 gallery_2"
+    "gallery_3 gallery_4 gallery_2"
+    "gallery_3 gallery_5 gallery_5";
+}
+
+.gallery-item{
+    border-radius: 10px;
+    width: 100%;
+}
+
+.gallery-1{
+    grid-area: gallery_1;
+    background-image: url('../img/gallery1.jpg');
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.gallery-2{
+    grid-area: gallery_2;
+    background-image: url('../img/gallery2.jpg');
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.gallery-3{
+    grid-area: gallery_3;
+    background-image: url('../img/gallery3.png');
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.gallery-4{
+    grid-area: gallery_4;
+    background-image: url('../img/gallery4.jpg');
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.gallery-5{
+    grid-area: gallery_5;
+    background-image: url('../img/gallery5.jpg');
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+@media screen and (max-width:1000px){
+.gallery-section{
+    grid-template-areas: 
+    "gallery_1 gallery_1 gallery_2"
+    "gallery_3 gallery_4 gallery_4"
+    "gallery_5 gallery_5 gallery_5";
+}
+}
+
+@media screen and (max-width:650px){
+
+    .gallery-section{
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(4,300px);
+        grid-template-areas: 
+        "gallery_1 gallery_1"
+        "gallery_2 gallery_3"
+        "gallery_4 gallery_4"
+        "gallery_5 gallery_5";
+    }
+    
+}
+
+@media (min-width: 200px) and (max-width:520px){
+
+    .gallery-section{
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: repeat(5,300px);
+        grid-template-areas: 
+        "gallery_1"
+        "gallery_2"
+        "gallery_3"
+        "gallery_4"
+        "gallery_5";
+    }
+    
+}

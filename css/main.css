@@ -1,0 +1,37 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.container{
+    display: grid;
+    grid-template-rows: 80vh repeat(5 , max-content);
+    grid-template-columns: repeat(6 , 1fr);
+}
+
+.section-title{
+    margin: 3rem 0;
+    color: #F99417;
+    text-align: center;
+    font-size: 30px;
+}
+
+.section-title::before,
+.section-title::after{
+    content: " ";
+    background-color: black;
+    display: inline-block;
+    height:1px;
+    width: 5%;
+    vertical-align: middle;
+    position: relative;
+}
+.section-title::before{
+    margin-right: 10px;
+}
+
+.section-title::after{
+    margin-left: 10px;
+}

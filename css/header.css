@@ -1,0 +1,51 @@
+.header{
+    background-image: linear-gradient(to bottom, #4d4c4c4f ,#000000) , url('../img/food-banner.jpg');
+    background-size: cover;
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-rows: repeat(3 , min-content);
+    grid-gap:10px;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    margin-bottom: 2rem;
+
+}
+
+.header1{
+    color: #fff;
+    font-size: 30px;
+}
+
+.header2{
+    color: #fff;
+    font-size: 40px;
+}
+
+.header2>span{
+    color: orange;
+}
+
+.order-btn{
+    color:orange;
+    padding: 20px;
+    transition: .3s;
+    border-radius: 7px;
+    border: 2px solid orange;
+    background-color:transparent;
+    font-size:20px;
+    justify-self: center;
+    cursor: pointer;
+}
+
+.order-btn:hover{
+    color:white;
+    transition: .3s;
+    background-color:orange;
+}
+
+@media screen and (max-width:550px){
+    .header{
+        background-position-x: 10%;
+    }
+}
